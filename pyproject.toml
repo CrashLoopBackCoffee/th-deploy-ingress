@@ -5,7 +5,7 @@ description = "Ingress configuration using cloudflare and tunneld"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "pulumi==3.144.1",
+    "pulumi==3.146.0",
     "pyyaml>=6.0.1",
     "pydantic>=2.10.3",
     "pip>=24.3.1",
