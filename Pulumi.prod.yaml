@@ -1,0 +1,7 @@
+config:
+  ingress:config:
+    cloudflare:
+      api-key:
+        ref: op://Pulumi/Cloudflare Global API Key/password
+      email: tobias_henkel@gmx.de
+      zone: tobiash.net
