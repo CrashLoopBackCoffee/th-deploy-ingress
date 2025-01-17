@@ -185,7 +185,6 @@ name = "ingress"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "pip" },
     { name = "pulumi" },
     { name = "pulumi-cloudflare" },
     { name = "pulumi-kubernetes" },
@@ -211,7 +210,6 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "pip", specifier = ">=24.3.1" },
     { name = "pulumi", specifier = "==3.146.0" },
     { name = "pulumi-cloudflare", specifier = ">=5.48.0" },
     { name = "pulumi-kubernetes", specifier = ">=4.19.0" },
