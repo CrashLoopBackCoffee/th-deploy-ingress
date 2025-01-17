@@ -16,8 +16,20 @@ def get_pulumi_project():
     return repo_dir.name[len(REPO_PREFIX) :]
 
 
+class CloudflareIngressConfig(deploy_base.model.LocalBaseModel):
+    service: str
+    hostname: str
+    set_origin_server_name: bool = False
+
+
+class CloudflaredConfig(deploy_base.model.LocalBaseModel):
+    version: str
+    ingress: list[CloudflareIngressConfig] = []
+
+
 class ComponentConfig(deploy_base.model.LocalBaseModel):
     cloudflare: deploy_base.model.CloudflareConfig
+    cloudflared: CloudflaredConfig
 
 
 class StackConfig(deploy_base.model.LocalBaseModel):
